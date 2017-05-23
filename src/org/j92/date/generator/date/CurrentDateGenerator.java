@@ -6,7 +6,7 @@ import java.time.format.DateTimeFormatter;
 public class CurrentDateGenerator implements DateGenerator {
     @Override
     public String generate() {
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm:ssXXX ");
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm:ssXXX");
         return formatter.format(ZonedDateTime.now());
     }
 }
