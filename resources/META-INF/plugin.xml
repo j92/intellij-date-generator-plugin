@@ -1,0 +1,31 @@
+<idea-plugin>
+  <id>com.j92.current-date-generator</id>
+  <name>Current date generator</name>
+  <version>1.0</version>
+  <vendor email="support@yourcompany.com" url="http://www.yourcompany.com">YourCompany</vendor>
+
+  <description><![CDATA[
+      Generates the current date in different formats
+    ]]></description>
+
+  <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
+  <idea-version since-build="145.0"/>
+
+  <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+       on how to target different products -->
+  <!-- uncomment to enable plugin in all products
+  <depends>com.intellij.modules.lang</depends>
+  -->
+
+  <extensions defaultExtensionNs="com.intellij">
+    <!-- Add your extensions here -->
+  </extensions>
+
+  <actions>
+    <action id="org.j92.date.generator.action.Gen" class="org.j92.date.generator.action.GenerateDateAction"
+            text="Generate Date" description="Generate the current date">
+      <add-to-group group-id="ToolsMenu" anchor="first"/>
+    </action>
+  </actions>
+
+</idea-plugin>
