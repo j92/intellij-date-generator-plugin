@@ -24,7 +24,7 @@
   <actions>
     <action id="org.j92.date.generator.action.Gen" class="org.j92.date.generator.action.GenerateDateAction"
             text="Generate Date" description="Generate the current date">
-      <add-to-group group-id="ToolsMenu" anchor="first"/>
+      <add-to-group group-id="GenerateGroup" anchor="first"/>
     </action>
   </actions>
 
