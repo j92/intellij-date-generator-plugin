@@ -8,7 +8,7 @@ import com.intellij.openapi.command.WriteCommandAction
 import com.intellij.openapi.editor.Editor
 import com.intellij.openapi.project.Project
 import org.j92.date.generator.date.CurrentDateGenerator
-
+gi
 class GenerateDateAction : AnAction() {
     override fun actionPerformed(event: AnActionEvent) {
         val project = event.getData(PROJECT)
