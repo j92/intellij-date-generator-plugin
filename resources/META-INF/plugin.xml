@@ -2,7 +2,7 @@
   <id>com.j92.current-date-generator</id>
   <name>Current date generator</name>
   <version>1.0</version>
-  <vendor email="support@yourcompany.com" url="http://www.yourcompany.com">YourCompany</vendor>
+  <vendor email="joostvdriel@gmail.com" url="http://joostvandriel.nl">Joost van Driel</vendor>
 
   <description><![CDATA[
       Generates the current date in different formats
