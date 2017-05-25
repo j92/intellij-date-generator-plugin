@@ -26,8 +26,13 @@ public class GenerateDateAction extends AnAction {
 
         String formattedDate = new CurrentDateGenerator().generate();
 
-        Runnable runnable = () -> document.insertString(selectionModel.getSelectionStart(), formattedDate);
+        final int selectionStart = selectionModel.getSelectionStart();
+        final int selectionEnd = selectionModel.getSelectionEnd();
+
+        Runnable runnable = () -> document.replaceString(selectionStart, selectionEnd, formattedDate);
 
         WriteCommandAction.runWriteCommandAction(project, runnable);
+
+        editor.getCaretModel().moveToOffset(selectionStart + formattedDate.length());
     }
 }
