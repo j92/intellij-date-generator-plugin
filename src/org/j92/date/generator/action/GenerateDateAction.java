@@ -20,7 +20,7 @@ public class GenerateDateAction extends AnAction {
             return;
         }
 
-        String formattedDate = new CurrentDateGenerator().generate();
+        String formattedDate = new CurrentDateGenerator(project).generate();
 
         Runnable runnable = () -> {
             for (Caret caret : editor.getCaretModel().getAllCarets()) {

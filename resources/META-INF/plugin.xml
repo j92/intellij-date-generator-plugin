@@ -5,12 +5,27 @@
   <vendor email="joostvdriel@gmail.com" url="http://joostvandriel.nl">Joost van Driel</vendor>
 
   <description><![CDATA[
-      Generates the current date in different formats
+<h1>Date generator</h1>
+<p>Generates the current date in different formats.</p>
+<h2>Configuration</h2>
+<p>The default format is : yyyy-MM-dd'T'HH:mm:ssXXX.
+Go in Preferences to `Other Settings -> Date generator` and customize the format.
+</p>
     ]]></description>
 
   <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
   <idea-version since-build="145.0"/>
 
+  <change-notes>
+    <![CDATA[
+
+<ul>
+    <li>Made the format configurable. Go in Preferences to `Other Settings -> Date generator` and customize the format.</a></li>
+</ul>
+
+<br/>
+]]>
+  </change-notes>
   <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
        on how to target different products -->
   <!-- uncomment to enable plugin in all products
@@ -18,7 +33,12 @@
   -->
 
   <extensions defaultExtensionNs="com.intellij">
-    <!-- Add your extensions here -->
+      <projectService serviceImplementation="org.j92.date.generator.Settings"/>
+      <projectConfigurable
+              instance="org.j92.ui.ConfigurationForm"
+              displayName="Date generator"
+              nonDefaultProject="true"
+      />
   </extensions>
 
   <actions>
