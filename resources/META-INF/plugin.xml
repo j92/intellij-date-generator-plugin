@@ -1,7 +1,7 @@
 <idea-plugin>
   <id>com.j92.current-date-generator</id>
   <name>Current date generator</name>
-  <version>1.0</version>
+  <version>1.1</version>
   <vendor email="joostvdriel@gmail.com" url="http://joostvandriel.nl">Joost van Driel</vendor>
 
   <description><![CDATA[
